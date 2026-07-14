@@ -60,7 +60,7 @@ useEffect(() => {
            duration={600}
            offset={-80}
            spy={true}
-           activeClass="text-cyan-400"
+           activeClass="!text-cyan-400"
            className="cursor-pointer text-gray-300 hover:text-cyan-400 transition relative group"
         >
 
@@ -81,9 +81,9 @@ useEffect(() => {
           whileTap={{ scale: 0.95 }}
           href="/resume.pdf"
           download
-          className="hidden md:block bg-cyan-500 hover:bg-cyan-600 px-5 py-2 rounded-xl font-semibold transition"
+         className="hidden md:block bg-cyan-500 hover:bg-cyan-600 hover:shadow-[0_0_20px_#22d3ee] px-5 py-2 rounded-xl font-semibold transition-all duration-300"
        >
-          Resume
+          ⬇ Resume
        </motion.a>
 
        {/* Mobile Menu Button */}
@@ -124,7 +124,7 @@ useEffect(() => {
         href="/resume.pdf"
         download
         className="block px-6 py-4 text-cyan-400"
-      >
+      > 
         Resume
       </a>
     </motion.div>
