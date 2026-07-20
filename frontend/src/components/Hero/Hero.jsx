@@ -90,7 +90,7 @@ const Hero = () => {
           <div className="mt-8 flex flex-wrap gap-3">
              <span className="rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-medium text-green-400">
                 🟢 Available for Full-Time Opportunities
-             </span>
+             </span>  
            </div>
 
           {/* Buttons */}
@@ -139,7 +139,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="mailto:your-email@gmail.com"
+              href="mailto:mayuri.turakane12@gmail.com"
               className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
             >
               <FaEnvelope />
