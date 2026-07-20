@@ -96,15 +96,15 @@ const Hero = () => {
           {/* Buttons */}
           <div className="flex flex-wrap gap-5 mt-10">
 
-            <a
-              href="/resume.pdf"
-              download
-             className="group flex items-center gap-2 rounded-xl bg-cyan-500 px-8 py-3 font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-600 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
-            >
-              <FaDownload />
-              Download Resume
-            </a>
-
+           <a
+  href="/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group flex items-center gap-2 rounded-xl bg-cyan-500 px-8 py-3 font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-600 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
+>
+  <FaDownload />
+  View Resume
+</a>
             <Link
               to="contact"
               smooth={true}
