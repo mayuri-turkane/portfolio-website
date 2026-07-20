@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaCheck } from "react-icons/fa";
-import { projects } from "./projectsData";
+import { projects } from "./ProjectsData";
 
 const categoryColors = {
   "Full Stack":
