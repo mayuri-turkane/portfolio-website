@@ -1,7 +1,7 @@
 import {
   FaUtensils,
   FaEye,
-  FaWallet,
+  FaBook,
   FaLeaf,
 } from "react-icons/fa";
 
@@ -70,6 +70,36 @@ export const projects = [
 
   {
     id: 3,
+    title: "Mayu's Library",
+    subtitle: "Open Library & Book Discovery Platform",
+    category: "Web Application",
+    icon: FaBook,
+    image: "/projects/library.png",
+
+    description:
+      "Open Library Platform designed for discovering, exploring, searching, and accessing books with an intuitive user interface, interactive catalog, and responsive web experience.",
+
+    features: [
+      "Book Discovery & Exploration",
+      "Search & Category Filtering",
+      "Interactive Book Catalog UI",
+      "RESTful API Data Fetching",
+      "Responsive Mobile-Friendly Layout",
+    ],
+
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "REST APIs",
+      "Tailwind CSS",
+      "Git",
+    ],
+
+    github: "https://github.com/mayuri-turkane/Mayu-s-Library",
+  },
+
+  {
+    id: 4,
     title: "Nutrition Analysis App",
     subtitle: "Android Application",
     category: "Android",
@@ -96,34 +126,5 @@ export const projects = [
     ],
 
     github: "https://github.com/mayuri-turkane/Nutrition-Analysis.git",
-  },
-
-  {
-    id: 4,
-    title: "Roommate Expense Splitter",
-    subtitle: "Roommate Expense & Bill Splitting Platform",
-    category: "Web Application",
-    icon: FaWallet,
-    image: "/projects/roommate.png",
-
-    description:
-      "Expense management application that simplifies bill splitting, balance tracking, and payment records among roommates.",
-
-    features: [
-      "Expense Tracking",
-      "Balance Calculation",
-      "Payment History",
-      "Split Bills",
-      "User Friendly Interface",
-    ],
-
-    technologies: [
-      "React.js",
-      "Java",
-      "SQLite",
-      "Git",
-    ],
-
-    github: "https://github.com/mayuri-turkane/roommate-expense-splitter.git",
   },
 ];
