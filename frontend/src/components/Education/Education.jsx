@@ -3,22 +3,33 @@ import {
   FaGraduationCap,
   FaUniversity,
   FaCalendarAlt,
+  FaAward,
 } from "react-icons/fa";
 
 const education = [
   {
     degree: "Master of Computer Applications (MCA)",
-    institute: "Pimpri Chinchwad University",
+    institute: "Pimpri Chinchwad University, Pune",
     duration: "2024 – 2026",
+    score: "CGPA: 8.54 / 10",
     description:
-      "Completed MCA with a strong focus on Full Stack Development, Java, Database Management Systems, Software Engineering, Web Technologies, and modern application development.",
+      "Specialized in Full Stack Development, RESTful API integrations, AI-native application workflows, and modern web software engineering.",
   },
   {
-    degree: "Bachelor of Science (Computer Science)",
-    institute: "K. J. Somaiya College",
+    degree: "Bachelor of Computer Science (BCS)",
+    institute: "K. J. Somaiya College, Kopargaon, Maharashtra",
     duration: "2021 – 2024",
+    score: "CGPA: 8.38 / 10",
     description:
-      "Built a strong foundation in Programming, Data Structures, Database Management Systems, Operating Systems, Computer Networks, and Problem Solving.",
+      "Built a strong foundation in Computer Science, Data Structures, OOP principles, Database Management Systems, and Software Development.",
+  },
+  {
+    degree: "Class XII – HSC (Science)",
+    institute: "Shri Saibaba Junior College, Shirdi, Maharashtra",
+    duration: "2020 – 2021",
+    score: "Percentage: 88.17%",
+    description:
+      "Completed Higher Secondary Certificate with a focus on Higher Mathematics, Physics, and Science fundamentals.",
   },
 ];
 
@@ -45,10 +56,8 @@ const Education = () => {
             My <span className="text-cyan-400">Education</span>
           </h2>
 
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            My academic journey has built a solid foundation in software
-            development, problem-solving, and modern technologies that support
-            my career as a Full Stack Developer.
+          <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
+            My academic journey has built a solid foundation in software engineering, problem-solving, and modern technologies.
           </p>
         </motion.div>
 
@@ -80,10 +89,18 @@ const Education = () => {
                   }}
                   className="flex-1 bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-2xl p-8 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]"
                 >
-                  {/* Duration */}
-                  <div className="flex items-center gap-2 text-cyan-400 font-semibold mb-3">
-                    <FaCalendarAlt />
-                    {item.duration}
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                    {/* Duration */}
+                    <div className="flex items-center gap-2 text-cyan-400 font-semibold">
+                      <FaCalendarAlt />
+                      {item.duration}
+                    </div>
+
+                    {/* Score */}
+                    <div className="flex items-center gap-1.5 text-xs font-semibold bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 px-3 py-1 rounded-full">
+                      <FaAward />
+                      {item.score}
+                    </div>
                   </div>
 
                   {/* Degree */}

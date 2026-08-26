@@ -1,31 +1,43 @@
 import { motion } from "framer-motion";
 import {
+  FaCode,
   FaLaptopCode,
-  FaServer,
   FaDatabase,
   FaTools,
+  FaBrain,
+  FaCogs,
 } from "react-icons/fa";
 
 const skills = [
   {
-    title: "Frontend",
+    title: "Languages",
+    icon: <FaCode />,
+    items: ["Java", "Python", "JavaScript", "HTML5", "CSS3"],
+  },
+  {
+    title: "Frameworks & UI",
     icon: <FaLaptopCode />,
-    items: ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS"],
+    items: ["React.js", "Next.js", "Tailwind CSS"],
   },
   {
-    title: "Backend",
-    icon: <FaServer />,
-    items: ["Java", "Python", "Flask", "REST APIs"],
-  },
-  {
-    title: "Database",
+    title: "Databases",
     icon: <FaDatabase />,
-    items: ["MySQL", "SQLite"],
+    items: ["MySQL", "SQLite", "Supabase"],
   },
   {
-    title: "Tools",
+    title: "Tools & IDEs",
     icon: <FaTools />,
-    items: ["Git", "GitHub", "VS Code", "Postman"],
+    items: ["VS Code", "Android Studio", "Postman", "Eclipse", "Git", "GitHub"],
+  },
+  {
+    title: "APIs & AI / ML",
+    icon: <FaBrain />,
+    items: ["Razorpay API", "Google Vision API", "OpenAI API", "OpenCV", "ML Integration", "YOLOv8", "ByteTrack"],
+  },
+  {
+    title: "Concepts & Methodologies",
+    icon: <FaCogs />,
+    items: ["OOP", "REST APIs", "SDLC", "Agile/Scrum"],
   },
 ];
 
@@ -55,15 +67,14 @@ const Skills = () => {
           </h2>
 
           <p className="mt-6 max-w-3xl mx-auto text-slate-400 leading-8">
-            A collection of technologies, frameworks, databases, and
-            development tools that I use to build modern, scalable,
-            and responsive applications.
+            A comprehensive list of programming languages, frameworks, databases,
+            AI/ML technologies, and tools aligned with my resume experience.
           </p>
         </motion.div>
 
         {/* Skills Grid */}
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
           {skills.map((category, index) => (
 
@@ -73,7 +84,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.5,
-                delay: index * 0.15,
+                delay: index * 0.1,
               }}
               viewport={{ once: true }}
               className="rounded-2xl border border-slate-800 bg-slate-900/80 p-7 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.2)]"
@@ -87,7 +98,7 @@ const Skills = () => {
                   {category.icon}
                 </div>
 
-                <h3 className="text-2xl font-bold">
+                <h3 className="text-xl font-bold">
                   {category.title}
                 </h3>
 
@@ -95,13 +106,13 @@ const Skills = () => {
 
               {/* Skills */}
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2.5">
 
                 {category.items.map((skill) => (
 
                   <span
                     key={skill}
-                    className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-500/20"
+                    className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3.5 py-1.5 text-xs font-medium text-cyan-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:bg-cyan-500/20"
                   >
                     {skill}
                   </span>

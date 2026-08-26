@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
 import {
   FaLaptopCode,
-  FaJava,
+  FaRobot,
   FaReact,
   FaBriefcase,
 } from "react-icons/fa";
 
 const highlights = [
   {
-    icon: <FaLaptopCode />,
-    title: "10+",
-    subtitle: "Projects Built",
-  },
-  {
-    icon: <FaJava />,
-    title: "REST",
-    subtitle: "APIs",
+    icon: <FaRobot />,
+    title: "AI Native",
+    subtitle: "Developer",
   },
   {
     icon: <FaReact />,
     title: "Full Stack",
-    subtitle: "Developer",
+    subtitle: "React & Next.js",
+  },
+  {
+    icon: <FaLaptopCode />,
+    title: "10+",
+    subtitle: "Projects Built",
   },
   {
     icon: <FaBriefcase />,
@@ -51,13 +51,13 @@ const About = () => {
           </p>
 
           <h2 className="mt-4 text-4xl md:text-5xl font-bold">
-            Building Scalable Web Applications
+            Building AI-Native & Scalable Web Applications
           </h2>
 
           <p className="mt-6 max-w-3xl mx-auto text-slate-400 leading-8">
             Passionate about creating modern, responsive, and scalable web
-            applications while continuously learning new technologies and
-            improving my development skills.
+            applications while integrating AI capabilities and production-ready
+            application workflows.
           </p>
         </motion.div>
 
@@ -85,17 +85,11 @@ const About = () => {
               <span className="font-semibold text-white">
                 Mayuri Turkane
               </span>
-              , an MCA graduate and passionate Full Stack Developer with
-              hands-on experience in Java, Spring Boot, React.js,
-              Python, Flask, and MySQL.
+              , an AI-focused Full Stack Developer and MCA graduate with hands-on experience building modern web applications, RESTful APIs, and AI-integrated solutions.
             </p>
 
             <p className="mt-6 text-slate-400 leading-8">
-              I enjoy developing clean and efficient web applications,
-              designing REST APIs, solving real-world problems, and
-              creating user-friendly interfaces. My goal is to build
-              impactful software while continuously learning and growing
-              as a software engineer.
+              Skilled in <span className="text-cyan-300 font-medium">React.js</span>, <span className="text-cyan-300 font-medium">Next.js</span>, <span className="text-cyan-300 font-medium">Supabase</span>, <span className="text-cyan-300 font-medium">JavaScript</span>, <span className="text-cyan-300 font-medium">Python</span>, and <span className="text-cyan-300 font-medium">MySQL</span>, with experience integrating APIs, AI capabilities, and production-ready application workflows. I possess strong problem-solving skills, rapid learning capability, and AI-assisted development expertise focusing on building scalable and user-centric web products.
             </p>
           </motion.div>
 
