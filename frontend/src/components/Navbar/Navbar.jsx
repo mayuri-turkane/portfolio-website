@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
+import Logo from "../Logo/Logo";
 
 const navLinks = [
   { name: "Home", to: "home" },
@@ -31,22 +32,18 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#050816]/95 shadow-lg backdrop-blur-xl"
-          : "bg-transparent"
+          ? "bg-[#050816]/95 shadow-lg backdrop-blur-xl py-3"
+          : "bg-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-5">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <motion.h1
-          whileHover={{ scale: 1.05 }}
-          className="text-3xl font-bold cursor-pointer"
-        >
-          <span className="text-white">Mayuri</span>
-          <span className="text-cyan-400">.</span>
-        </motion.h1>
+        <Link to="home" smooth={true} duration={500}>
+          <Logo />
+        </Link>
 
         {/* Menu */}
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((item) => (
             <Link
               key={item.to}
@@ -71,14 +68,14 @@ const Navbar = () => {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:block bg-cyan-500 hover:bg-cyan-600 hover:shadow-[0_0_20px_#22d3ee] px-5 py-2 rounded-xl font-semibold text-sm transition-all duration-300"
+          className="hidden lg:block bg-cyan-500 hover:bg-cyan-600 hover:shadow-[0_0_20px_#22d3ee] px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300"
         >
           ⬇ Resume
         </motion.a>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white text-3xl"
+          className="lg:hidden text-white text-3xl"
           onClick={() => setOpen(!open)}
         >
           {open ? <HiOutlineX /> : <HiOutlineMenuAlt3 />}
@@ -92,7 +89,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-[#050816] border-t border-slate-800"
+            className="lg:hidden bg-[#050816] border-t border-slate-800"
           >
             {navLinks.map((item) => (
               <Link

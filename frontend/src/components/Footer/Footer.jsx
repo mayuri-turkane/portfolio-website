@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import Logo from "../Logo/Logo";
 import {
   FaGithub,
   FaLinkedin,
@@ -332,18 +333,20 @@ const Footer = () => {
         {/* Bottom */}
 
         <div className="border-t border-slate-800 mt-20 pt-10 pb-12 flex flex-col md:flex-row items-center justify-between gap-5">
+          <Link to="home" smooth={true} duration={600} className="cursor-pointer">
+            <Logo size="small" />
+          </Link>
 
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-400 text-sm">
             © {year} Designed & Developed by
             <span className="text-cyan-400 font-semibold">
               {" "}Mayuri Turkane
             </span>
           </p>
 
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-xs">
             Built with React • Tailwind CSS • Framer Motion
           </p>
-
         </div>
 
       </div>
