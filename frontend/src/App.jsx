@@ -1,37 +1,29 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Experience from "./components/Experience/Experience";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import Education from "./components/Education/Education";
-import Certifications from "./components/Certifications/Certifications";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import SectionDivider from "./components/SectionDivider/SectionDivider";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import Home from "./pages/Home";
+import AllProjects from "./pages/AllProjects";
+import AllCertifications from "./pages/AllCertifications";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 function App() {
   return (
-    <div className="bg-slate-950 text-white">
-      <Navbar />
-      <Hero />
-      <SectionDivider />
-      <About />
-      <SectionDivider />
-      <Experience />
-      <SectionDivider />
-      <Skills />
-      <SectionDivider />
-      <Projects />
-      <SectionDivider />
-      <Education />
-      <SectionDivider />
-      <Certifications />
-      <SectionDivider />
-      <Contact />
-      <SectionDivider />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<AllProjects />} />
+        <Route path="/certifications" element={<AllCertifications />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
