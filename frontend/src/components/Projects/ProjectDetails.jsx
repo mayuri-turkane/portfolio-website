@@ -15,7 +15,8 @@ const ProjectDetails = ({ project, onBack }) => {
 
       <button
         onClick={onBack}
-        className="mb-10 flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition"
+        aria-label="Back to projects list"
+        className="mb-10 flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition cursor-pointer"
       >
         <HiArrowLeft />
         Back to Projects
@@ -27,7 +28,8 @@ const ProjectDetails = ({ project, onBack }) => {
 
         <img
           src={project.image}
-          alt={project.title}
+          alt={`${project.title} - ${project.subtitle} by Mayuri Turkane`}
+          loading="lazy"
           className="h-[350px] w-full object-cover"
         />
 

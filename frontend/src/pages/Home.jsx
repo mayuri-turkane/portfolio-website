@@ -14,21 +14,23 @@ const Home = () => {
   return (
     <div className="bg-slate-950 text-white min-h-screen">
       <Navbar />
-      <Hero />
-      <SectionDivider />
-      <About />
-      <SectionDivider />
-      <Experience />
-      <SectionDivider />
-      <Skills />
-      <SectionDivider />
-      <Projects />
-      <SectionDivider />
-      <Education />
-      <SectionDivider />
-      <Certifications />
-      <SectionDivider />
-      <Contact />
+      <main id="main-content">
+        <Hero />
+        <SectionDivider />
+        <About />
+        <SectionDivider />
+        <Experience />
+        <SectionDivider />
+        <Skills />
+        <SectionDivider />
+        <Projects />
+        <SectionDivider />
+        <Education />
+        <SectionDivider />
+        <Certifications />
+        <SectionDivider />
+        <Contact />
+      </main>
       <SectionDivider />
       <Footer />
     </div>

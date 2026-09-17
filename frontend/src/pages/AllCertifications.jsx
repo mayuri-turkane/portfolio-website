@@ -63,12 +63,13 @@ const AllCertifications = () => {
       {/* Top Header */}
       <header className="sticky top-0 z-40 bg-[#050816]/95 backdrop-blur-xl border-b border-slate-800/80 py-4 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="cursor-pointer">
+          <Link to="/" aria-label="Mayuri Turkane - Home" className="cursor-pointer">
             <Logo />
           </Link>
 
           <Link
             to="/"
+            aria-label="Back to Home page"
             className="group flex items-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-300 transition-all duration-300 hover:bg-cyan-500 hover:text-slate-950 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
           >
             <FaArrowLeft className="text-xs transition-transform duration-300 group-hover:-translate-x-1" />
@@ -111,12 +112,14 @@ const AllCertifications = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Search certifications by name, issuer, or skill"
                 placeholder="Search by certificate name, issuer (Red Hat, IBM, Microsoft), or skill..."
                 className="w-full rounded-2xl border border-slate-800 bg-slate-900/90 pl-11 pr-10 py-3.5 text-sm sm:text-base text-white placeholder-slate-500 outline-none transition duration-300 focus:border-cyan-400 focus:shadow-[0_0_20px_rgba(34,211,238,0.25)]"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
+                  aria-label="Clear search query"
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition text-sm"
                 >
                   <FaTimes />
@@ -266,6 +269,7 @@ const AllCertifications = () => {
                     <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-3">
                       <button
                         onClick={() => setActiveModalCert(cert)}
+                        aria-label={`View full credential details for ${cert.title}`}
                         className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-600 px-4 py-2.5 text-xs font-semibold text-slate-950 transition-all duration-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]"
                       >
                         <FaIdBadge className="text-sm" />
@@ -276,7 +280,8 @@ const AllCertifications = () => {
                         <a
                           href={cert.verifyUrl}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
+                          aria-label={`Verify ${cert.title} on official portal (opens in new tab)`}
                           className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-700 bg-slate-800 hover:border-cyan-400/50 hover:text-cyan-300 px-3.5 py-2.5 text-xs font-medium text-slate-300 transition duration-300"
                           title="Verify Credential"
                         >
@@ -307,6 +312,7 @@ const AllCertifications = () => {
               {/* Close Button */}
               <button
                 onClick={() => setActiveModalCert(null)}
+                aria-label="Close certification details modal"
                 className="absolute top-6 right-6 flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white transition duration-300"
               >
                 <FaTimes />
@@ -396,7 +402,8 @@ const AllCertifications = () => {
                     <a
                       href={activeModalCert.verifyUrl}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
+                      aria-label={`Verify ${activeModalCert.title} on official portal (opens in new tab)`}
                       className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-600 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
                     >
                       <FaExternalLinkAlt className="text-sm" />
@@ -406,6 +413,7 @@ const AllCertifications = () => {
 
                   <button
                     onClick={() => setActiveModalCert(null)}
+                    aria-label="Close modal"
                     className="px-6 py-3 rounded-xl border border-slate-700 bg-slate-800 hover:border-slate-600 text-sm font-semibold text-slate-300 transition"
                   >
                     Close

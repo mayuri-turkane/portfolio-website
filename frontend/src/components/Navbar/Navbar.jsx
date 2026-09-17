@@ -38,21 +38,29 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <Link to="home" smooth={true} duration={500}>
+        <Link
+          to="home"
+          href="#home"
+          smooth={true}
+          duration={500}
+          aria-label="Mayuri Turkane - Scroll to top of page"
+        >
           <Logo />
         </Link>
 
         {/* Menu */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-7" aria-label="Main navigation">
           {navLinks.map((item) => (
             <Link
               key={item.to}
               to={item.to}
+              href={`#${item.to}`}
               smooth={true}
               duration={600}
               offset={-80}
               spy={true}
               activeClass="!text-cyan-400 font-semibold"
+              aria-label={`Navigate to ${item.name} section`}
               className="cursor-pointer text-gray-300 hover:text-cyan-400 transition relative group text-sm"
             >
               {item.name}
@@ -63,8 +71,10 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-white text-3xl"
+          className="lg:hidden text-white text-3xl focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded-lg p-1"
           onClick={() => setOpen(!open)}
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={open}
         >
           {open ? <HiOutlineX /> : <HiOutlineMenuAlt3 />}
         </button>
@@ -72,7 +82,8 @@ const Navbar = () => {
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <motion.nav
+            aria-label="Mobile navigation"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -83,17 +94,19 @@ const Navbar = () => {
               <Link
                 key={item.to}
                 to={item.to}
+                href={`#${item.to}`}
                 smooth={true}
                 duration={600}
                 offset={-80}
                 spy={true}
                 onClick={() => setOpen(false)}
+                aria-label={`Navigate to ${item.name} section`}
                 className="block px-6 py-3.5 text-gray-300 hover:text-cyan-400 cursor-pointer"
               >
                 {item.name}
               </Link>
             ))}
-          </motion.div>
+          </motion.nav>
         )}
       </AnimatePresence>
     </header>

@@ -57,12 +57,13 @@ const AllProjects = () => {
       {/* Top Navigation Bar */}
       <header className="sticky top-0 z-40 bg-[#050816]/95 backdrop-blur-xl border-b border-slate-800/80 py-4 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="cursor-pointer">
+          <Link to="/" aria-label="Mayuri Turkane - Home" className="cursor-pointer">
             <Logo />
           </Link>
 
           <Link
             to="/"
+            aria-label="Back to Home page"
             className="group flex items-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-300 transition-all duration-300 hover:bg-cyan-500 hover:text-slate-950 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
           >
             <FaArrowLeft className="text-xs transition-transform duration-300 group-hover:-translate-x-1" />
@@ -104,12 +105,14 @@ const AllProjects = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Search projects by name, technology, or keywords"
                 placeholder="Search by project name, tech (React, Python, Supabase), or keywords..."
                 className="w-full rounded-2xl border border-slate-800 bg-slate-900/90 pl-11 pr-10 py-3.5 text-sm sm:text-base text-white placeholder-slate-500 outline-none transition duration-300 focus:border-cyan-400 focus:shadow-[0_0_20px_rgba(34,211,238,0.25)]"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
+                  aria-label="Clear search query"
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition text-sm"
                 >
                   <FaTimes />
@@ -193,7 +196,8 @@ const AllProjects = () => {
                       {project.image ? (
                         <img
                           src={project.image}
-                          alt={project.title}
+                          alt={`${project.title} - ${project.subtitle} by Mayuri Turkane`}
+                          loading="lazy"
                           className="h-full w-full object-cover transition duration-500 hover:scale-105"
                         />
                       ) : (
@@ -270,7 +274,8 @@ const AllProjects = () => {
                         <a
                           href={project.github}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
+                          aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
                           className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-600 px-4 py-2.5 text-xs font-semibold text-slate-950 transition-all duration-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]"
                         >
                           <FaGithub className="text-sm" />
@@ -281,7 +286,8 @@ const AllProjects = () => {
                           <a
                             href={project.live}
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
+                            aria-label={`View ${project.title} live demo (opens in new tab)`}
                             className="inline-flex items-center justify-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-400/10 hover:bg-cyan-400 hover:text-slate-950 px-4 py-2.5 text-xs font-semibold text-cyan-300 transition-all duration-300"
                           >
                             <FaExternalLinkAlt className="text-xs" />
@@ -291,6 +297,7 @@ const AllProjects = () => {
 
                         <button
                           onClick={() => setActiveModalProject(project)}
+                          aria-label={`View detailed case study for ${project.title}`}
                           className="px-3 py-2.5 rounded-xl border border-slate-700 bg-slate-800 hover:border-slate-600 text-xs font-medium text-slate-300 transition duration-300"
                           title="View Details"
                         >
@@ -320,6 +327,7 @@ const AllProjects = () => {
               {/* Close Button */}
               <button
                 onClick={() => setActiveModalProject(null)}
+                aria-label="Close project details modal"
                 className="absolute top-6 right-6 flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white transition duration-300"
               >
                 <FaTimes />
@@ -346,7 +354,8 @@ const AllProjects = () => {
                   <div className="relative h-60 rounded-2xl overflow-hidden mb-6 border border-slate-800">
                     <img
                       src={activeModalProject.image}
-                      alt={activeModalProject.title}
+                      alt={`${activeModalProject.title} - ${activeModalProject.subtitle}`}
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -402,7 +411,8 @@ const AllProjects = () => {
                   <a
                     href={activeModalProject.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${activeModalProject.title} GitHub repository (opens in new tab)`}
                     className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-600 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
                   >
                     <FaGithub className="text-base" />
@@ -413,7 +423,8 @@ const AllProjects = () => {
                     <a
                       href={activeModalProject.live}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${activeModalProject.title} live demo (opens in new tab)`}
                       className="inline-flex items-center gap-2 rounded-xl border border-cyan-400 px-6 py-3 text-sm font-semibold text-cyan-400 transition hover:bg-cyan-400 hover:text-slate-950"
                     >
                       <FaExternalLinkAlt className="text-xs" />

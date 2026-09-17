@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Home from "./pages/Home";
-import AllProjects from "./pages/AllProjects";
-import AllCertifications from "./pages/AllCertifications";
+
+const Home = lazy(() => import("./pages/Home"));
+const AllProjects = lazy(() => import("./pages/AllProjects"));
+const AllCertifications = lazy(() => import("./pages/AllCertifications"));
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -14,15 +15,23 @@ const ScrollToTop = () => {
   return null;
 };
 
+const PageLoader = () => (
+  <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+    <div className="w-12 h-12 rounded-full border-4 border-slate-800 border-t-cyan-400 animate-spin"></div>
+  </div>
+);
+
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<AllProjects />} />
-        <Route path="/certifications" element={<AllCertifications />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<AllProjects />} />
+          <Route path="/certifications" element={<AllCertifications />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

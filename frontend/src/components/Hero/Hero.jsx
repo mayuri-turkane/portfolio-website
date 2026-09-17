@@ -74,6 +74,7 @@ const Hero = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Download Mayuri Turkane's Resume (PDF)"
               className="group flex items-center gap-2 rounded-xl bg-cyan-500 px-8 py-3 font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-600 hover:shadow-[0_0_25px_rgba(34,211,238,0.45)]"
             >
               <FaDownload />
@@ -84,6 +85,7 @@ const Hero = () => {
               smooth={true}
               duration={500}
               offset={-70}
+              aria-label="Scroll to Contact section"
               className="group cursor-pointer rounded-xl border border-cyan-400 px-8 py-3 font-semibold text-cyan-400 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-400 hover:text-slate-950 hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]"
             >
               Contact Me
@@ -119,7 +121,12 @@ const Hero = () => {
               <div className="relative h-80 w-80 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 p-[5px] shadow-[0_0_60px_rgba(34,211,238,0.35)] md:h-96 md:w-96">
                 <img
                   src={profile}
-                  alt="Mayuri"
+                  alt="Mayuri Turkane - Full Stack Developer & AI Solutions Engineer"
+                  width="384"
+                  height="384"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
                   className="w-full h-full rounded-full object-cover object-top border-4 border-slate-900"
                 />
               </div>

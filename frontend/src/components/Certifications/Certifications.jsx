@@ -144,6 +144,7 @@ const Certifications = () => {
         >
           <Link
             to="/certifications"
+            aria-label={`Explore all ${certifications.length} certifications and verified credentials`}
             className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-teal-500 to-blue-600 font-bold text-white text-base shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_45px_rgba(34,211,238,0.6)] hover:scale-105 active:scale-95 transition-all duration-300"
           >
             <span>Explore More Certifications ({certifications.length}+)</span>

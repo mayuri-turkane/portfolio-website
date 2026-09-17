@@ -102,49 +102,51 @@ const Contact = () => {
 
             <div className="space-y-6">
 
-              <div className="flex items-center gap-5 bg-slate-900/70 backdrop-blur-md border border-slate-700 rounded-2xl p-5 hover:border-cyan-400 transition">
-
-                <div className="w-14 h-14 rounded-xl bg-cyan-500 flex items-center justify-center">
+              <a
+                href="mailto:mayuri.turakane12@gmail.com"
+                aria-label="Send email to mayuri.turakane12@gmail.com"
+                className="flex items-center gap-5 bg-slate-900/70 backdrop-blur-md border border-slate-700 rounded-2xl p-5 hover:border-cyan-400 transition"
+              >
+                <div className="w-14 h-14 rounded-xl bg-cyan-500 flex items-center justify-center text-white shrink-0">
                   <FaEnvelope className="text-2xl"/>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-lg">Email</h4>
+                  <h4 className="font-semibold text-lg text-white">Email</h4>
                   <p className="text-gray-400">
                     mayuri.turakane12@gmail.com
                   </p>
                 </div>
+              </a>
 
-              </div>
-
-              <div className="flex items-center gap-5 bg-slate-900/70 backdrop-blur-md border border-slate-700 rounded-2xl p-5 hover:border-cyan-400 transition">
-
-                <div className="w-14 h-14 rounded-xl bg-cyan-500 flex items-center justify-center">
+              <a
+                href="tel:+918010388611"
+                aria-label="Call Mayuri Turkane at +91 8010388611"
+                className="flex items-center gap-5 bg-slate-900/70 backdrop-blur-md border border-slate-700 rounded-2xl p-5 hover:border-cyan-400 transition"
+              >
+                <div className="w-14 h-14 rounded-xl bg-cyan-500 flex items-center justify-center text-white shrink-0">
                   <FaPhoneAlt className="text-xl"/>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-lg">Phone</h4>
+                  <h4 className="font-semibold text-lg text-white">Phone</h4>
                   <p className="text-gray-400">
                     +91 8010388611
                   </p>
                 </div>
-
-              </div>
+              </a>
 
               <div className="flex items-center gap-5 bg-slate-900/70 backdrop-blur-md border border-slate-700 rounded-2xl p-5 hover:border-cyan-400 transition">
-
-                <div className="w-14 h-14 rounded-xl bg-cyan-500 flex items-center justify-center">
+                <div className="w-14 h-14 rounded-xl bg-cyan-500 flex items-center justify-center text-white shrink-0">
                   <FaMapMarkerAlt className="text-2xl"/>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-lg">Location</h4>
+                  <h4 className="font-semibold text-lg text-white">Location</h4>
                   <p className="text-gray-400">
                     Pune, Maharashtra, India
                   </p>
                 </div>
-
               </div>
 
             </div>
@@ -156,8 +158,9 @@ const Contact = () => {
               <a
                 href="https://github.com/mayuri-turkane"
                 target="_blank"
-                rel="noreferrer"
-                className="w-14 h-14 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-500 transition"
+                rel="noopener noreferrer"
+                aria-label="Visit Mayuri Turkane's GitHub profile (opens in new tab)"
+                className="w-14 h-14 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-500 transition text-white"
               >
                 <FaGithub className="text-2xl"/>
               </a>
@@ -165,8 +168,9 @@ const Contact = () => {
               <a
                 href="https://www.linkedin.com/in/mayuri-turkane-39954532b"
                 target="_blank"
-                rel="noreferrer"
-                className="w-14 h-14 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-500 transition"
+                rel="noopener noreferrer"
+                aria-label="Visit Mayuri Turkane's LinkedIn profile (opens in new tab)"
+                className="w-14 h-14 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-500 transition text-white"
               >
                 <FaLinkedin className="text-2xl"/>
               </a>
@@ -184,53 +188,62 @@ const Contact = () => {
             whileInView={{ opacity:1,x:0 }}
             transition={{ duration:.6 }}
             viewport={{ once:true }}
+            aria-label="Contact form"
             className="bg-slate-900/80 backdrop-blur-lg border border-slate-700 rounded-3xl p-8"
           >
 
-                      <h3 className="text-3xl font-bold mb-8">
+            <h3 className="text-3xl font-bold mb-8">
               Send Me a Message
             </h3>
 
             <div className="space-y-6">
 
               <div>
-                <label className="block mb-2 text-gray-300">
+                <label htmlFor="from_name" className="block mb-2 text-gray-300 font-medium">
                   Full Name
                 </label>
 
                 <input
+                  id="from_name"
                   type="text"
                   name="from_name"
+                  autoComplete="name"
                   placeholder="Enter your name"
                   required
+                  aria-required="true"
                   className="w-full p-4 rounded-xl bg-[#0f172a] border border-slate-700 focus:border-cyan-400 outline-none transition"
                 />
               </div>
 
               <div>
-                <label className="block mb-2 text-gray-300">
+                <label htmlFor="from_email" className="block mb-2 text-gray-300 font-medium">
                   Email Address
                 </label>
 
                 <input
+                  id="from_email"
                   type="email"
                   name="from_email"
+                  autoComplete="email"
                   placeholder="Enter your email"
                   required
+                  aria-required="true"
                   className="w-full p-4 rounded-xl bg-[#0f172a] border border-slate-700 focus:border-cyan-400 outline-none transition"
                 />
               </div>
 
               <div>
-                <label className="block mb-2 text-gray-300">
+                <label htmlFor="message" className="block mb-2 text-gray-300 font-medium">
                   Message
                 </label>
 
                 <textarea
+                  id="message"
                   rows="6"
                   name="message"
                   placeholder="Write your message..."
                   required
+                  aria-required="true"
                   className="w-full p-4 rounded-xl bg-[#0f172a] border border-slate-700 focus:border-cyan-400 outline-none transition resize-none"
                 ></textarea>
               </div>
@@ -238,13 +251,13 @@ const Contact = () => {
             </div>
 
             {success && (
-              <p className="text-green-400 mt-6 font-medium">
+              <p className="text-green-400 mt-6 font-medium" role="status">
                 {success}
               </p>
             )}
 
             {error && (
-              <p className="text-red-400 mt-6 font-medium">
+              <p className="text-red-400 mt-6 font-medium" role="alert">
                 {error}
               </p>
             )}
@@ -252,6 +265,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
+              aria-label="Send message"
               className="mt-8 w-full bg-cyan-500 hover:bg-cyan-600 transition duration-300 rounded-xl py-4 font-semibold text-lg flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)]"
             >
               <FaPaperPlane />

@@ -1,0 +1,17 @@
+{
+  "name": "Mayuri Turkane - Full Stack Developer",
+  "short_name": "Mayuri Turkane",
+  "description": "Portfolio of Mayuri Turkane, AI-focused Full Stack Developer and MCA graduate based in Pune, India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#050816",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

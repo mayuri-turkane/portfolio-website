@@ -78,7 +78,8 @@ const Projects = () => {
                   {project.image ? (
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={`${project.title} - ${project.subtitle} by Mayuri Turkane`}
+                      loading="lazy"
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
                     />
                   ) : (
@@ -171,7 +172,8 @@ const Projects = () => {
                   <a
                     href={project.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
+                    aria-label={`View source code for ${project.title} on GitHub (opens in new tab)`}
                     className="mt-8 inline-flex items-center gap-3 rounded-xl bg-cyan-500 px-6 py-3 font-semibold transition-all duration-300 hover:bg-cyan-600 hover:shadow-[0_0_20px_#22d3ee] hover:scale-105 text-sm"
                   >
                     <FaGithub className="text-lg" />
@@ -193,6 +195,7 @@ const Projects = () => {
         >
           <Link
             to="/projects"
+            aria-label={`Explore all ${projects.length} projects on dedicated projects page`}
             className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-teal-500 to-blue-600 font-bold text-white text-base shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_45px_rgba(34,211,238,0.6)] hover:scale-105 active:scale-95 transition-all duration-300"
           >
             <span>Explore More Projects ({projects.length}+)</span>

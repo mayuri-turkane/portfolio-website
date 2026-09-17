@@ -1,0 +1,57 @@
+# Mayuri Turkane - Professional Profile & AI Knowledge Graph
+
+> AI-focused Full Stack Developer and MCA graduate based in Pune, Maharashtra, India. Specializing in React.js, Next.js, Python, Flask, Supabase, MySQL, RESTful APIs, and Computer Vision (YOLOv8, ByteTrack).
+
+## Personal Information
+- **Full Name**: Mayuri Turkane
+- **Role**: AI Native Full Stack Developer
+- **Location**: Pune, Maharashtra, India (Geo: 18.5204° N, 73.8567° E)
+- **Email**: mayuri.turakane12@gmail.com
+- **Phone**: +91 8010388611
+- **Status**: Available for Full-Time Developer roles, internships, and freelance projects
+- **GitHub**: https://github.com/mayuri-turkane
+- **LinkedIn**: https://www.linkedin.com/in/mayuri-turkane-39954532b
+
+## Core Technical Skills
+- **Frontend Development**: React.js, Next.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Responsive Web Design, Component Architecture
+- **Backend & APIs**: Python, Flask, RESTful API Design, JWT Authentication, Node.js basics, Razorpay API Integration
+- **Databases & Cloud**: MySQL, Supabase, SQLite, Relational Database Modeling, Query Optimization
+- **AI & Computer Vision**: YOLOv8, ByteTrack object tracking, OpenCV, OpenAI API, Streamlit deployment
+- **Tools & Environments**: Git, GitHub, VS Code, Postman, Android Studio, Linux command line
+
+## Flagship Projects
+1. **CampusCrave** (Full Stack Food Ordering Platform)
+   - Repository: https://github.com/mayuri-turkane/CampusCrave.git
+   - Stack: React.js, Flask, MySQL, Python, Razorpay API, JWT Auth, Tailwind CSS
+   - Features: JWT-authenticated ordering system, dynamic cart, Razorpay payment processing, ML demand prediction model (~85% accuracy).
+
+2. **Real-Time Human Detection & Counting System** (AI & Computer Vision)
+   - Repository: https://github.com/mayuri-turkane/Real-Time-Human-Detection-and-Counting-System.git
+   - Stack: Python, YOLOv8, OpenCV, ByteTrack, Streamlit
+   - Features: Real-time people detection, unique ID tracking, bidirectional line crossing counter, retail analytics dashboard.
+
+3. **Mayu's Library** (Full Stack Library & Book Management)
+   - Repository: https://github.com/mayuri-turkane/Mayus-Library.git
+   - Stack: React.js, Node.js, Express, MongoDB/MySQL, Tailwind CSS
+
+4. **Next.js Real-time Analytics Dashboard**
+   - Repository: https://github.com/mayuri-turkane/nextjs-realtime-analytics-dashboard.git
+   - Stack: Next.js 14, React, Supabase, Tailwind CSS, Chart.js
+
+5. **Secure Portal Application**
+   - Repository: https://github.com/mayuri-turkane/Secure-portal-application.git
+   - Stack: React, Next.js, Node.js, RBAC, JWT Auth
+
+## Academic Background
+- **Master of Computer Applications (MCA)**: Pimpri Chinchwad University, Pune (2024 – 2026) | CGPA: 8.54 / 10
+- **Bachelor of Computer Science (BCS)**: K. J. Somaiya College, Kopargaon, Maharashtra (2021 – 2024) | CGPA: 8.38 / 10
+- **Class XII (Science - HSC)**: Shri Saibaba Junior College, Shirdi, Maharashtra (2020 – 2021) | Percentage: 88.17%
+
+## Key Certifications
+- **Python Programming with Red Hat (AD141 - RHA)** – Red Hat (2026)
+- **Python Programming** – Skill India Digital Hub & Microsoft (2026)
+- **Introduction to Data Science** – IBM • Coursera (2025)
+- **UI / UX Design Specialization** – California Institute of the Arts • Coursera (2025)
+- **Web Technologies & Security** – Coursera (2025)
+- **Java Programming Certification** – Certification Course (2024)
+- **C Programming Certification** – Certification Course (2023)

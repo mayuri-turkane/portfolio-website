@@ -37,17 +37,18 @@ const Footer = () => {
 
   const [displayed, setDisplayed] = useState([]);
   const [index, setIndex] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
-    if (index >= commands.length) return;
+    if (!hasStarted || index >= commands.length) return;
 
     const timer = setTimeout(() => {
       setDisplayed((prev) => [...prev, commands[index]]);
       setIndex(index + 1);
-    }, 220);
+    }, 200);
 
     return () => clearTimeout(timer);
-  }, [index]);
+  }, [hasStarted, index]);
 
   return (
     <footer className="relative overflow-hidden bg-[#030712] text-white pt-24">
@@ -117,6 +118,7 @@ const Footer = () => {
           <motion.div
             initial={{ opacity:0,x:-80 }}
             whileInView={{ opacity:1,x:0 }}
+            onViewportEnter={() => setHasStarted(true)}
             viewport={{ once:true }}
             transition={{ duration:.8 }}
             className="rounded-3xl overflow-hidden border border-cyan-500/20 bg-[#0b1220] shadow-[0_0_60px_rgba(34,211,238,.08)]"
@@ -294,7 +296,8 @@ const Footer = () => {
                 }}
                 href="https://github.com/mayuri-turkane"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Visit Mayuri Turkane's GitHub profile (opens in new tab)"
                 className="w-16 h-16 rounded-2xl bg-slate-900 border border-slate-700 flex items-center justify-center hover:border-cyan-400 hover:bg-cyan-500 transition"
               >
                 <FaGithub size={28} />
@@ -307,7 +310,8 @@ const Footer = () => {
                 }}
                 href="https://www.linkedin.com/in/mayuri-turkane-39954532b"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Visit Mayuri Turkane's LinkedIn profile (opens in new tab)"
                 className="w-16 h-16 rounded-2xl bg-slate-900 border border-slate-700 flex items-center justify-center hover:border-cyan-400 hover:bg-cyan-500 transition"
               >
                 <FaLinkedin size={28} />
@@ -319,6 +323,7 @@ const Footer = () => {
                   rotate: 8,
                 }}
                 href="mailto:mayuri.turakane12@gmail.com"
+                aria-label="Send email to mayuri.turakane12@gmail.com"
                 className="w-16 h-16 rounded-2xl bg-slate-900 border border-slate-700 flex items-center justify-center hover:border-cyan-400 hover:bg-cyan-500 transition"
               >
                 <FaEnvelope size={26} />
@@ -333,7 +338,14 @@ const Footer = () => {
         {/* Bottom */}
 
         <div className="border-t border-slate-800 mt-20 pt-10 pb-12 flex flex-col md:flex-row items-center justify-between gap-5">
-          <Link to="home" smooth={true} duration={600} className="cursor-pointer">
+          <Link
+            to="home"
+            href="#home"
+            smooth={true}
+            duration={600}
+            aria-label="Mayuri Turkane - Scroll to top of page"
+            className="cursor-pointer"
+          >
             <Logo size="small" />
           </Link>
 
@@ -344,7 +356,7 @@ const Footer = () => {
             </span>
           </p>
 
-          <p className="text-gray-500 text-xs">
+          <p className="text-gray-400 text-xs">
             Built with React • Tailwind CSS • Framer Motion
           </p>
         </div>
@@ -355,8 +367,10 @@ const Footer = () => {
 
       <Link
         to="home"
+        href="#home"
         smooth={true}
         duration={600}
+        aria-label="Scroll back to top of page"
         className="fixed bottom-8 right-8 z-50 cursor-pointer"
       >
         <motion.div
