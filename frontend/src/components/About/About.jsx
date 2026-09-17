@@ -33,7 +33,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#050816] py-24 text-white"
+      className="bg-[#050816] pt-16 pb-10 text-white"
     >
       <div className="max-w-7xl mx-auto px-6">
 
@@ -50,7 +50,7 @@ const About = () => {
             About Me
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Building AI-Native & Scalable Web Applications
           </h2>
 

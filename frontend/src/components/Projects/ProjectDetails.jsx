@@ -37,10 +37,8 @@ const ProjectDetails = ({ project, onBack }) => {
             {project.category}
           </span>
 
-          <h2 className="mt-6 text-5xl font-bold">
-
+          <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             {project.title}
-
           </h2>
 
           <p className="mt-4 text-xl text-slate-400">

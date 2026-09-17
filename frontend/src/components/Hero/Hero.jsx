@@ -1,11 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaDownload,
-} from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 import { HiArrowDown } from "react-icons/hi";
 import { Link } from "react-scroll";
 
@@ -36,12 +31,12 @@ const Hero = () => {
             👋 Hello, I'm
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white">
             Mayuri
             <span className="text-cyan-400"> Turkane</span>
           </h1>
 
-          <div className="mt-6 min-h-[4rem] text-2xl font-semibold text-slate-300 sm:text-3xl lg:text-4xl">
+          <div className="mt-4 min-h-[3rem] text-xl font-medium text-slate-300 sm:text-2xl lg:text-3xl">
             <TypeAnimation
               sequence={[
                 "AI Native Developer",
@@ -56,28 +51,9 @@ const Hero = () => {
               speed={50}
               repeat={Infinity}
             />
-
-            <div className="flex flex-wrap gap-2.5 mt-6">
-              {[
-                "React.js",
-                "Next.js",
-                "JavaScript",
-                "Java",
-                "Python",
-                "MySQL",
-                "Supabase",
-              ].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-cyan-400/30 text-cyan-300 text-xs font-medium transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500/10 hover:-translate-y-1"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
           </div>
 
-          <p className="mt-14 max-w-xl text-lg leading-8 text-slate-400">
+          <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400">
             AI-focused Full Stack Developer and MCA graduate with hands-on experience building modern web applications, RESTful APIs, and AI-integrated solutions. Skilled in
             <span className="text-cyan-400 font-medium"> React.js</span>,
             <span className="text-cyan-400 font-medium"> Next.js</span>,
@@ -113,70 +89,43 @@ const Hero = () => {
               Contact Me
             </Link>
           </div>
-
-          {/* Social Icons */}
-          <div className="flex gap-6 mt-10 text-2xl text-white">
-            <a
-              href="https://github.com/mayuri-turkane"
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
-            >
-              <FaGithub />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/mayuri-turkane-39954532b"
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
-            >
-              <FaLinkedin />
-            </a>
-
-            <a
-              href="mailto:mayuri.turakane12@gmail.com"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]"
-            >
-              <FaEnvelope />
-            </a>
-          </div>
-
         </motion.div>
 
         {/* RIGHT SIDE */}
-        <motion.div
-          className="flex justify-center"
-          initial={{ opacity: 0, x: 60 }}
-          animate={{
-            opacity: 1,
-            x: 0,
-            y: [0, -12, 0],
-          }}
-          transition={{
-            opacity: { duration: 0.8 },
-            x: { duration: 0.8 },
-            y: {
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            },
-          }}
-        >
-          <div className="relative">
-            {/* Glow */}
-            <div className="absolute inset-0 rounded-full bg-cyan-400 blur-3xl opacity-30"></div>
+        <div className="flex justify-center lg:self-start lg:pt-6">
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0, x: 60 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              y: [0, -12, 0],
+            }}
+            transition={{
+              opacity: { duration: 0.8 },
+              x: { duration: 0.8 },
+              y: {
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              },
+            }}
+          >
+            <div className="relative">
+              {/* Glow */}
+              <div className="absolute inset-0 rounded-full bg-cyan-400 blur-3xl opacity-30"></div>
 
-            {/* Image Border */}
-            <div className="relative h-80 w-80 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 p-[5px] shadow-[0_0_60px_rgba(34,211,238,0.35)] md:h-96 md:w-96">
-              <img
-                src={profile}
-                alt="Mayuri"
-                className="w-full h-full rounded-full object-cover border-4 border-slate-900"
-              />
+              {/* Image Border */}
+              <div className="relative h-80 w-80 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 p-[5px] shadow-[0_0_60px_rgba(34,211,238,0.35)] md:h-96 md:w-96">
+                <img
+                  src={profile}
+                  alt="Mayuri"
+                  className="w-full h-full rounded-full object-cover object-top border-4 border-slate-900"
+                />
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
       </div>
 

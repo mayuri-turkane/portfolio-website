@@ -98,7 +98,7 @@ const Footer = () => {
             Thanks For Visiting
           </span>
 
-          <h2 className="text-5xl font-black mt-5">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mt-5">
             Let's Build Something
             <span className="text-cyan-400"> Amazing.</span>
           </h2>

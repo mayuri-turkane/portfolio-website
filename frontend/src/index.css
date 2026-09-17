@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+.font-signature {
+  font-family: 'Great Vibes', 'Alex Brush', 'Sacramento', cursive;
+}
+
+.font-script-modern {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+}
+
+.font-allura {
+  font-family: 'Allura', cursive;
+}
+
+.font-sacramento {
+  font-family: 'Sacramento', cursive;
+}
+
 html {
   scroll-behavior: smooth;
 }

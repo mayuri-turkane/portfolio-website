@@ -49,7 +49,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative bg-[#050816] text-white py-24 overflow-hidden"
+      className="relative bg-[#050816] text-white pt-12 pb-16 overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-[120px]" />
@@ -67,7 +67,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
 
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Get In <span className="text-cyan-400">Touch</span>
           </h2>
 

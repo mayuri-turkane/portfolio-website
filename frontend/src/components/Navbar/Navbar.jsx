@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
@@ -61,18 +61,6 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Resume Button */}
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:block bg-cyan-500 hover:bg-cyan-600 hover:shadow-[0_0_20px_#22d3ee] px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300"
-        >
-          ⬇ Resume
-        </motion.a>
-
         {/* Mobile Menu Button */}
         <button
           className="lg:hidden text-white text-3xl"
@@ -105,15 +93,6 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-6 py-3.5 text-cyan-400 font-semibold"
-            >
-              Resume
-            </a>
           </motion.div>
         )}
       </AnimatePresence>

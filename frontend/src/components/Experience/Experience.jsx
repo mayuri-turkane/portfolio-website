@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaBriefcase, FaCalendarAlt, FaRobot } from "react-icons/fa";
+import { FaCalendarAlt, FaRobot } from "react-icons/fa";
 
 const experiences = [
   {
@@ -18,7 +18,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative bg-[#050816] text-white py-24 overflow-hidden"
+      className="relative bg-[#050816] text-white pt-10 pb-16 overflow-hidden"
     >
       {/* Background Blur */}
       <div className="absolute top-20 right-10 w-80 h-80 bg-cyan-500/10 blur-[120px] rounded-full" />
@@ -37,7 +37,7 @@ const Experience = () => {
             Work Experience
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Professional <span className="text-cyan-400">Experience</span>
           </h2>
 

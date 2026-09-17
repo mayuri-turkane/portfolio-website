@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="bg-[#050816] py-24 text-white"
+      className="bg-[#050816] pt-12 pb-16 text-white"
     >
       <div className="max-w-7xl mx-auto px-6">
 
@@ -40,7 +40,7 @@ const Projects = () => {
             My Work
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Featured Projects & Case Studies
           </h2>
 

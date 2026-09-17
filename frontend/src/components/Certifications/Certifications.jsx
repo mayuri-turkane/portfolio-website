@@ -61,7 +61,7 @@ const Certifications = () => {
   return (
     <section
       id="certifications"
-      className="relative bg-[#050816] py-24 text-white overflow-hidden"
+      className="relative bg-[#050816] text-white pt-12 pb-16 overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute top-20 left-0 w-72 h-72 bg-cyan-500/10 blur-[120px] rounded-full"></div>
@@ -76,7 +76,7 @@ const Certifications = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             My <span className="text-cyan-400">Certifications</span>
           </h2>
 

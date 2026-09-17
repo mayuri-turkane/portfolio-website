@@ -45,7 +45,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-[#0b1120] py-24 text-white"
+      className="bg-[#0b1120] pt-12 pb-16 text-white"
     >
       <div className="max-w-7xl mx-auto px-6">
 
@@ -62,7 +62,7 @@ const Skills = () => {
             Technical Skills
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Technologies I Work With
           </h2>
 

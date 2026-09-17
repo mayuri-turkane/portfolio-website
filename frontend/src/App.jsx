@@ -8,19 +8,28 @@ import Education from "./components/Education/Education";
 import Certifications from "./components/Certifications/Certifications";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import SectionDivider from "./components/SectionDivider/SectionDivider";
 
 function App() {
   return (
     <div className="bg-slate-950 text-white">
       <Navbar />
       <Hero />
+      <SectionDivider />
       <About />
+      <SectionDivider />
       <Experience />
+      <SectionDivider />
       <Skills />
+      <SectionDivider />
       <Projects />
+      <SectionDivider />
       <Education />
+      <SectionDivider />
       <Certifications />
+      <SectionDivider />
       <Contact />
+      <SectionDivider />
       <Footer />
     </div>
   );
